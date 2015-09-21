@@ -400,18 +400,18 @@ public class PokerHandCheck {
         
         // checking for 2 of a kind by assigning a boolean variable to the conditional statement that
         // says every possible combo of two nums being equivalent to one another
-        boolean pair2 = aNum == bNum || aNum == cNum || aNum == dNum || aNum == eNum || bNum == cNum || bNum == dNum || bNum == eNum || cNum == dNum || cNum == eNum || dNum == eNum;
+        boolean pair2 = aNum.equals(bNum) || aNum.equals(cNum) || aNum.equals(dNum) || aNum.equals(eNum) || bNum.equals(cNum) || bNum.equals(dNum) || bNum.equals(eNum) || cNum.equals(dNum) || cNum.equals(eNum) || dNum.equals(eNum);
         
         //System.out.println(pair2); // checking if the conditional achieved its intended purpose
         
         // checking for 3 of a kind by setting two diff nums equivalent to the same num in every possible combo for 5 different nums
-        boolean pair3 = (aNum == bNum && aNum == cNum) || (aNum == bNum && aNum == dNum) || (aNum == bNum && aNum == eNum) || (aNum == cNum && aNum == dNum) || (aNum == cNum && aNum == eNum) || (aNum == dNum && aNum == eNum) || (bNum == cNum && bNum ==dNum) || (bNum == cNum && bNum == eNum) || (bNum == dNum && bNum == eNum) || (cNum == dNum && cNum == eNum);
+        boolean pair3 = (aNum.equals(bNum) && aNum.equals(cNum)) || (aNum.equals(bNum) && aNum.equals(dNum)) || (aNum.equals(bNum) && aNum.equals(eNum)) || (aNum.equals(cNum) && aNum.equals(dNum)) || (aNum.equals(cNum) && aNum.equals(eNum)) || (aNum.equals(dNum) && aNum.equals(eNum)) || (bNum.equals(cNum) && bNum.equals(dNum)) || (bNum.equals(cNum) && bNum.equals(eNum)) || (bNum.equals(dNum) && bNum.equals(eNum)) || (cNum.equals(dNum) && cNum.equals(eNum));
         
         //System.out.println(pair3); // checking if the conditional achieved its intended purpose
         
         // checking for two pairs
         // by creating a conditional that says one pair and another pair equivalent to each other for every combo that 5 cards can make
-        boolean twoPairs = (aNum == bNum && cNum == dNum) || (aNum == bNum && cNum == eNum) || (aNum == bNum && dNum == eNum) || (aNum == cNum && bNum == dNum) || (aNum == cNum && bNum == eNum) || (aNum == cNum && dNum == eNum) || (aNum == dNum && bNum == cNum) || (aNum == dNum && bNum == eNum) || (aNum == dNum && cNum == eNum) || (aNum == eNum && bNum == cNum) || (aNum == eNum && bNum == dNum) || (aNum == dNum && cNum == dNum) || (bNum == cNum && dNum == eNum) || (bNum == dNum && cNum == eNum) || (bNum == eNum && cNum == dNum);
+        boolean twoPairs = (aNum.equals(bNum) && cNum.equals(dNum)) || (aNum.equals(bNum) && cNum.equals(eNum)) || (aNum.equals(bNum) && dNum.equals(eNum)) || (aNum.equals(cNum) && bNum.equals(dNum)) || (aNum.equals(cNum) && bNum.equals(eNum)) || (aNum.equals(cNum) && dNum.equals(eNum)) || (aNum.equals(dNum) && bNum.equals(cNum)) || (aNum.equals(dNum) && bNum.equals(eNum)) || (aNum.equals(dNum) && cNum.equals(eNum)) || (aNum.equals(eNum) && bNum.equals(cNum)) || (aNum.equals(eNum) && bNum.equals(dNum)) || (aNum.equals(dNum) && cNum.equals(dNum)) || (bNum.equals(cNum) && dNum.equals(eNum)) || (bNum.equals(dNum) && cNum.equals(eNum)) || (bNum.equals(eNum) && cNum.equals(dNum));
         
         //System.out.println(twoPairs); // checking if the conditional achieved its intended purpose 
         
