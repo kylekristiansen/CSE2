@@ -411,7 +411,7 @@ public class PokerHandCheck {
         
         // checking for two pairs
         // by creating a conditional that says one pair and another pair equivalent to each other for every combo that 5 cards can make
-        boolean twoPairs = (aNum.equals(bNum) && cNum.equals(dNum)) || (aNum.equals(bNum) && cNum.equals(eNum)) || (aNum.equals(bNum) && dNum.equals(eNum)) || (aNum.equals(cNum) && bNum.equals(dNum)) || (aNum.equals(cNum) && bNum.equals(eNum)) || (aNum.equals(cNum) && dNum.equals(eNum)) || (aNum.equals(dNum) && bNum.equals(cNum)) || (aNum.equals(dNum) && bNum.equals(eNum)) || (aNum.equals(dNum) && cNum.equals(eNum)) || (aNum.equals(eNum) && bNum.equals(cNum)) || (aNum.equals(eNum) && bNum.equals(dNum)) || (aNum.equals(dNum) && cNum.equals(dNum)) || (bNum.equals(cNum) && dNum.equals(eNum)) || (bNum.equals(dNum) && cNum.equals(eNum)) || (bNum.equals(eNum) && cNum.equals(dNum));
+        boolean twoPairs = (aNum.equals(bNum) && cNum.equals(dNum)) || (aNum.equals(bNum) && cNum.equals(eNum)) || (aNum.equals(bNum) && dNum.equals(eNum)) || (aNum.equals(cNum) && bNum.equals(dNum)) || (aNum.equals(cNum) && bNum.equals(eNum)) || (aNum.equals(cNum) && dNum.equals(eNum)) || (aNum.equals(dNum) && bNum.equals(cNum)) || (aNum.equals(dNum) && bNum.equals(eNum)) || (aNum.equals(dNum) && cNum.equals(eNum)) || (aNum.equals(eNum) && bNum.equals(cNum)) || (aNum.equals(eNum) && bNum.equals(dNum)) || (aNum.equals(eNum) && cNum.equals(dNum)) || (bNum.equals(cNum) && dNum.equals(eNum)) || (bNum.equals(dNum) && cNum.equals(eNum)) || (bNum.equals(eNum) && cNum.equals(dNum));
         
         //System.out.println(twoPairs); // checking if the conditional achieved its intended purpose 
         
