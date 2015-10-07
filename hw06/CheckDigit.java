@@ -148,34 +148,3 @@ public class CheckDigit {
     }
 }
 
-/*
- * System.out.print("how much spent on Mon:    $");
-        // initializing day variable and the counter variable
-        double mon = 0.0;
-        int i = 0;
-        // getting into a while loop to ensure that prompted input IS NOT a string or negative number
-        while (i == 0) {
-            // if statements use conditional to make sure that the number is either an int, double, or float
-            if (s.hasNextInt() || s.hasNextDouble() || s.hasNextFloat()) {
-                // accepting the input
-                mon = s.nextDouble();
-                // if statement to ensure that input is positive
-                if (mon < 0.0) {
-                    // if negative, printing string that will prompt for new input when the loops runs again
-                    System.out.print("invalid input, negative int, please try again:    $");
-                    // negative counter so that we do not leave the loop before getting proper input
-                    i--;
-                }
-            }
-            // else statement to prompt for new input if what was entered is anything but an int, double, or float
-            else { 
-                System.out.print("invalid input, not an int, please try again:      $");
-                // command to find and return the next token from this scanner
-                s.next();
-                // decrement to make sure we dont leave the loop
-                i--;
-            }
-            // increment to return counter to 0
-            i++;
-        }
- */
