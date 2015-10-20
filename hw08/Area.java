@@ -27,22 +27,16 @@ public class Area {
         
         System.out.print("input one of the following shapes, rectangle, triangle, or circle: ");
         String input = "";
-        String rectangle = "rectangle";
+        String rectangle = "rectangle"; // strings to check the input with
         String triangle = "triangle";
         String circle = "circle";
         int i = 0; 
         
-        while (i == 0) {
+        while (i == 0) { // loop that checks to make sure proper string is inputed
             if (s.hasNextLine()) {    
                 input = s.nextLine();
-                if (input.equals(rectangle)) {
-                    i++; continue;
-                }
-                else if(input.equals(triangle)) {
-                    i++; continue;
-                }
-                else if (input.equals(circle)) {
-                    i++; continue;
+                if (input.equals(rectangle) || input.equals(triangle) || input.equals(circle)) {
+                    i++; continue; // gets out of loop if the string is good
                 }
                 else {
                     System.out.print("input not valid, enter either rectangle, triangle, or circle: ");
@@ -57,7 +51,7 @@ public class Area {
             i++;
         }
         
-        double width = 0.0;
+        double width = 0.0; // initiallizing all the future variables so that i can call them in loops
         double height = 0.0;
         double radius = 0.0;
         double area = 0.0;
@@ -69,8 +63,8 @@ public class Area {
             for (i=0; i==0; i++) {
                 if (s.hasNextDouble()) {
                     width = s.nextDouble();
-                    check = checkInput(width);
-                    while (check == invalid) {
+                    check = checkInput(width); // calling on check method to make sure that width is a double
+                    while (check == invalid) { // if method returns false then we run input again and check again
                         System.out.print("invalid input for width, enter double value: ");
                         width = s.nextDouble();
                         check = checkInput(width);
@@ -81,7 +75,7 @@ public class Area {
                     s.next();
                     i--;
             }   }
-            System.out.print("input double value for height: ");
+            System.out.print("input double value for height: "); // doing the same thing over and over again
             for (i=0; i==0; i++) {
                 if (s.hasNextDouble()) {
                     height = s.nextDouble();
@@ -97,12 +91,12 @@ public class Area {
                     i--;
             }   }
         
-            area = rectangle(width, height);
-            print(area);
-            return;
+            area = rectangle(width, height); // calling on rectangle area method
+            print(area); // printing the area
+            return; // ending the program because none of the following code is useful at this point
         }
         
-        if (input.equals(triangle)) {
+        if (input.equals(triangle)) { // doing the same thing we just did but for the triangle
             System.out.print("input double value for width: ");
             for (i=0; i==0; i++) {
                 if (s.hasNextDouble()) {
@@ -141,7 +135,7 @@ public class Area {
         
         }
 
-        if (input.equals(circle)) {
+        if (input.equals(circle)) { // same thing for the circle
             System.out.print("input double value for radius: ");
             for (i=0; i==0; i++) {
                 if (s.hasNextDouble()) {
@@ -166,20 +160,20 @@ public class Area {
         }
     }
     
-    public static double rectangle(double width, double height) {
+    public static double rectangle(double width, double height) { // area of rectangle
         double Area = width*height;
         return Area;
     }
-    public static double triangle(double width, double height) {
+    public static double triangle(double width, double height) { // area of triangle
         double Area = (width*height)/2;
         return Area;
     }
-    public static double circle(double radius) {
+    public static double circle(double radius) { // area of circle
         double pi = 3.14159265359;
         double Area = pi*(Math.pow(radius, 2));
         return Area;
     }
-    public static boolean checkInput(double dimension) {
+    public static boolean checkInput(double dimension) { // checking the dimension input
         if (dimension >= 0.000001) {
             return true;
         }
@@ -187,7 +181,7 @@ public class Area {
             return false;
         }
     }
-    public static void print(double area) {
+    public static void print(double area) { // void method print statement
         System.out.println("Area: " +area);
     }
 }
