@@ -32,7 +32,7 @@ public class CheckDigit {
                 // accept the input
                 barcode = s.next();
                 // if the input is not 10 digits long....
-                if (barcode.length() != 10) {
+                if (barcode.l8ength() != 10) {
                     // prompt new input and cycle back to beginning of loop
                     System.out.print("invalid barcode, not an isbn, enter 10 digits:    ");
                     i--;

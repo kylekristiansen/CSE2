@@ -53,10 +53,11 @@ public class CardGenerator {
         
         // now switching variable 'card' to a string for every different int value that it could be between 0 and 12    
         switch (card) {
-            case 1: 
-                num = "ace";
-                break;
-            case 2:
+            case 1: // first case of number that generator could turn up 
+                num = "ace"; // the string that has been switched to from the integer 
+                break; // needed in order to cut off the running commands, if i didnt put break, then the chain would continue and not skip over 
+                        // subsequent cases once the proper one has been hit
+            case 2: 
                 num = "2";
                 break;
             case 3:
@@ -102,10 +103,4 @@ public class CardGenerator {
     }
     
 }
-
-
-
-
-
-
 

@@ -25,6 +25,8 @@
 // hint3:
 //      use the scanner code to manually imput some variables so that you can check you code and dont have to keep generating random numbers
 
+// to get a random number between [0,1)  you say num = Math.random()
+
 // get started:
 
 // declaration of the class

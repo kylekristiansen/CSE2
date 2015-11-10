@@ -47,6 +47,8 @@ public class Arithmetic {
     System.out.println("Cost per item: "+sockCost$+"");
     tSockCost = nSocks*sockCost$;
     System.out.println("Total cost for the socks before tax: "+tSockCost+"");
+    // calculating the tax amount, multiplying it by 100, chopping off decimals by typecasting to an int
+    // typecasting back to a double and dividing by 100 so that decimals only go to the hundredths place
     double itemSalesTaxS;
     itemSalesTaxS = tSockCost*taxPercent*100;
     int intItemSalesTaxS = (int) itemSalesTaxS;

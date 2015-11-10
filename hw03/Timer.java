@@ -45,10 +45,12 @@ public class Timer {
         
         // reducing time until res into just hours.min and then cutting off the decimal
         hours = (int) (timeTilRes/100);
+        System.out.println(hours);
         //System.out.println("hours til res: " +hours); // checking that it came out as the correct variable
-        
+        System.out.println(timeTilRes);
         // finding the remainder of min when 100 is multiplied into the time til res variable
         minutes = timeTilRes % 60;
+        System.out.println(minutes);
         //System.out.println("min til res: " +minutes); // checking program
         
         System.out.println("you have " +hours+ " hours and " +minutes+ " minutes until dinner reservation");

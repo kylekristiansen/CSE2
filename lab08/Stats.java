@@ -73,8 +73,7 @@ public class Stats {
         
         double mean = Mean(num1, num2, num3, num4, num5);
         
-        double median = Median(num1, num2, num3, num4, num5);
-        
+        double median = Median(num1, num2, num3, num4, num5);   
         Print(mean, median);
         
     }

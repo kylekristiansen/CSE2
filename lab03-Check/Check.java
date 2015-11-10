@@ -20,7 +20,7 @@ public class Check {
             // prepare code to accept input
             // first step: declare instance of the Scanner object (myScanner) and call the Scanner instructor
             // we will declare instance so that scanner will take input from STDIN
-            Scanner myScanner = new Scanner ( System.in); 
+            Scanner myScanner = new Scanner ( System.in ); 
             // now ready to accept input
             
             // prompting for first input

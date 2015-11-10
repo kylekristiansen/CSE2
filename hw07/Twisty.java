@@ -119,7 +119,7 @@ public class Twisty {
                     // if the vert was not an odd number then you execute this else statement
                     else {
                         // if you are working with the even factor of the vert then print a /
-                        if (((k/vert)%2) == 4%2) {
+                        if (((k/vert)%2) == 0) {
                             System.out.print("/");
                         }
                         // if you make it here and dont print the /, print a #

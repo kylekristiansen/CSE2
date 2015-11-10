@@ -56,7 +56,7 @@ public class encrypted_x {
                 if (j == i) {
                     System.out.print(" ");
                 }
-                else if (j == input - (i + 1)) {
+                else if (j == input - (i+1)) {
                     System.out.print(" ");
                     //System.out.print("OO");
                 }
