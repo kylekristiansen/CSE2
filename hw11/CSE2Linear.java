@@ -125,13 +125,25 @@ public class CSE2Linear {
                 s.next();
             }
         }
+        boolean isArraySorted = true;
+        for (i=1; i<grades.length; i++) {
+            if (grades[i-1] > grades[i]) {
+                isArraySorted = false;
+                println("array is not sorted in increasing order");
+                i = grades.length;
+                
+            }
+        }
         
-        println("sorted:");
         // defining new array and then calling on the sort method
         int[] gSorted = new int[15];
-        gSorted = sort(grades);
-        // print method
-        printar(gSorted); 
+        
+        if (isArraySorted == false) {
+            println("sorted array:");
+            gSorted = sort(grades);
+            // print method
+            printar(gSorted); 
+        }
         
         print("enter a grade to search for: ");
         int key = s.nextInt();
