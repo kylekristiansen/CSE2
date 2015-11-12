@@ -111,15 +111,20 @@ public class CSE2Linear {
         print("enter 15 ints in increasing order for students final grades: ");
         int[] grades = new int[15];
         int i = 0;
+        grades[0] = s.nextInt();
         // for loop the assigns each grades[i] to an inputed value unless that value is out of range or not an int
-        for (i=0; i < grades.length; i++) {
+        for (i=1; i < grades.length; i++) {
             if (s.hasNextInt()) {
                 grades[i] = s.nextInt();
                 if (grades[i] < 0 || grades[i] > 100) {
                     print("int exceeds grading range, reenter: ");
                     grades[i] = s.nextInt();
                 }
-            }
+                /*if (grades[i] < grades[i-1]) {
+                    print("int must be increasing, reenter an input greater than the last: ");
+                    grades[i] = s.nextInt();
+                }
+*/            }
             else {
                 print("not an int, reenter: ");
                 s.next();
@@ -149,11 +154,13 @@ public class CSE2Linear {
         int key = s.nextInt();
         // lin search method looking for the key
         linearSearch(gSorted, key);
+        //linearSearch(grades, key);
         
         println("Scrambled: ");
         // declaring scramble array and then scrambling the sorted array
         int[] gScrambled = new int[15];
         gScrambled = scramble(gSorted);
+        //gScrambled = scramble(grades);
         printar(gScrambled);
         
         print("enter a grade to search for: ");
