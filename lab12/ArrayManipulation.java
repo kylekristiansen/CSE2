@@ -54,14 +54,37 @@ public class ArrayManipulation {
         return minArray;
     }
     
-    public static int[] findLargest(int[][] twoD) {
-        int[] maxArray = twoD[0];
-        for (int i = 1; i < twoD.length; i++) {
-            if (twoD[i].length > maxArray.length) {
-                maxArray = twoD[i];
+    public static void findLargest(int[][] twoD) {
+        //int[] maxArray = twoD[0];
+        int maxMemMem = -10000000;
+        int [] maxMemMemArray = new int[twoD.length];
+        int num = 0;
+        for (int i = 0; i < twoD.length; i++) {
+            maxMemMem = twoD[i][0];
+            for (int j = 1; j < twoD[i].length; j++) {
+                if (twoD[i][j] > maxMemMem) {
+                maxMemMem = twoD[i][j];
+                }
+            }
+            maxMemMemArray[i] = maxMemMem;
+        }
+        num = maxMemMemArray[0];
+        int index = 0;
+        for (int k = 1; k < maxMemMemArray.length; k++) {
+            if (maxMemMemArray[k] > num) {
+                num = maxMemMemArray[k];
+                index = k;
+                
             }
         }
-        return maxArray;
+        
+        System.out.println("the largest member of a member array is: ");
+        System.out.println(num);
+        System.out.println("this member comes from the member array: ");
+        for (int m = 0; m < twoD[index].length; m++) {
+             System.out.print(twoD[index][m] + "  ");
+        }
+        //return num;
     }
     
     public static int memArray(int[][] twoD) {
@@ -110,13 +133,14 @@ public class ArrayManipulation {
         
         
         
-        System.out.println("the longest member array: ");
-        int[] maxArray = findLargest(twoD);
-        printArray(maxArray);
+        findLargest(twoD);
         System.out.println();
+        //printArray(maxArray);
+        //System.out.print(maxMem);
+        //System.out.println();
         // what member array did this come from?
-        int memArrayNum = memArray(twoD);
-        System.out.println("this array came from member array number: " +memArrayNum);
+        //int memArrayNum = memArray(twoD);
+        //System.out.println("this array came from member array number: " +memArrayNum);
         
         
         
